@@ -8,12 +8,13 @@ public class C04_HardAssert {
         TestNG'de iki tane Assert class'i vardir
         1.si JUnit'deki Assert class'i ile ayni method'lara sahiptir.
         Ilk FAILED olan assert isleminde calismayi durdurur ve hata mesaji verir
-        2.assert class'inin adi softAssert oldugu icin ilkine hard assert denmistir
+        2.assert class'inin adi softAssert oldugu icin ilkine hard assert denmistir.
+
         2.Assert class'i ise SoftAssert class'idir
         SoftAssert biz raporla deyinceye kadar
-        assertion'lari failed olsa bile calistirmaya devam eder
+        assertion'lari failed olsa bile calistirmaya devam eder.
         biz raporla dedigimizde calisan assertion'lardan kacinin failed oldugunu soyler
-        ve failed olan assertion varsa raporla dedigimiz satirda calismayi durdurur
+        ve failed olan assertion varsa raporla dedigimiz satirda calismayi durdurur.
      */
 
     @Test
