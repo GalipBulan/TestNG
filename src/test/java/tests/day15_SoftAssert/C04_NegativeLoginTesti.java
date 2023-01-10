@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualitydemyPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C04_NegativeLoginTesti {
     // 3 test method'u olusturun
@@ -15,11 +16,21 @@ public class C04_NegativeLoginTesti {
 
     @Test
     public void yanlisEmailTesti(){
-
+        ReusableMethods.bekle(3);
+        qualitydemyPage= new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("mehmet@abc.com");
         qualitydemyPage.passwordKutusu.sendKeys("31488081");
+        //qualitydemyPage.loginButonu.click();
+
+        ReusableMethods.bekle(5);
+        //qualitydemyPage.cookies.click();
+
+        if (qualitydemyPage.cookies.isDisplayed()){
+            qualitydemyPage.cookies.click();
+        }
+        ReusableMethods.bekle(2);
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
@@ -34,6 +45,15 @@ public class C04_NegativeLoginTesti {
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("user_1106147@login.com");
         qualitydemyPage.passwordKutusu.sendKeys("123456");
+        // qualitydemyPage.loginButonu.click();
+
+        ReusableMethods.bekle(5);
+        //qualitydemyPage.cookies.click();
+
+        if (qualitydemyPage.cookies.isDisplayed()){
+            qualitydemyPage.cookies.click();
+        }
+        ReusableMethods.bekle(2);
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
@@ -49,6 +69,15 @@ public class C04_NegativeLoginTesti {
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("mehmet@abc.com");
         qualitydemyPage.passwordKutusu.sendKeys("123456");
+        //qualitydemyPage.loginButonu.click();
+
+        ReusableMethods.bekle(5);
+        //qualitydemyPage.cookies.click();
+
+        if (qualitydemyPage.cookies.isDisplayed()){
+            qualitydemyPage.cookies.click();
+        }
+        ReusableMethods.bekle(2);
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
