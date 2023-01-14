@@ -6,14 +6,14 @@ import org.testng.asserts.SoftAssert;
 public class C05_SoftAssert {
 
 
-    @Test
+    @Test (groups = {"minireg1","smoke"})
     public void test01(){
 
         // 1.adim softAssert objesi olusturmak
 
         SoftAssert softAssert= new SoftAssert();
 
-        // 2.adim softAssert objesini kullanarak istenilen assertion'lari yapin
+        // 2.adim softAssert objesini kullanarak istenilen assertion'lari yapin.
 
         softAssert.assertEquals(6,8); // Failed
         System.out.println("1.assertion sonrasi");

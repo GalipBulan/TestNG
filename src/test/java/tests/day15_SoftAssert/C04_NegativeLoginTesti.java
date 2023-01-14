@@ -1,4 +1,4 @@
-package tests.day15__SoftAssert;
+package tests.day15_SoftAssert;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

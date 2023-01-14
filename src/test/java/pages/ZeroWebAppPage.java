@@ -34,4 +34,5 @@ public class ZeroWebAppPage {
 
     @FindBy(id="pc_currency")
     public WebElement currencyDropdown;
+
 }

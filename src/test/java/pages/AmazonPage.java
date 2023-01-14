@@ -11,7 +11,7 @@ public class AmazonPage {
     // Page sayfalari o web sayfasinda kullanilacak locate'ler
     // ve varsa login islemi gibi basit method'lar icin kullanilir
     // Bir page classi olusturur olusturmaz ilk yapilacak sey parametresiz bin constructor
-    // olusturup icinde PageFactory.initElements(webdriver, this) ile driver'a
+    // olusturup icinde PageFactory.initElements(Driver.getDriver, this) ile driver'a
     // page sayfasinda ilk deger atamasi yapmak olmalidir.
 
 

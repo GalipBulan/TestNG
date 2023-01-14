@@ -1,4 +1,4 @@
-package tests.day15__SoftAssert;
+package tests.day15_SoftAssert;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,18 +16,12 @@ public class C03_PozitifLoginTesti {
         QualitydemyPage qualitydemyPage=new QualitydemyPage();
         qualitydemyPage.ilkLoginLinki.click();
         // 3- Kullanici email'i olarak valid email girin
-        qualitydemyPage.kullaniciEmailKutusu.sendKeys("galipbulan@gmail.com");
+        qualitydemyPage.kullaniciEmailKutusu.sendKeys("galan@gmail.com");
         // 4- Kullanici sifresi olarak valid sifre girin
-        qualitydemyPage.passwordKutusu.sendKeys("Hatay.31");
+        qualitydemyPage.passwordKutusu.sendKeys("ayhhh1");
         // 5- Login butonuna basarak login olun
-
-        ReusableMethods.bekle(5);
-        // qualitydemyPage.cookies.click();
-
-        if (qualitydemyPage.cookies.isDisplayed()){
-            qualitydemyPage.cookies.click();
-        }
-        ReusableMethods.bekle(2);
+        qualitydemyPage.cookies.click();
+        ReusableMethods.bekle(3);
         qualitydemyPage.loginButonu.click();
 
         // 6- Basarili olarak giris yapilabildigini test edin

@@ -1,4 +1,4 @@
-package tests.day15__SoftAssert;
+package tests.day15_SoftAssert;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -9,7 +9,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import java.util.*;
 public class C02_SoftAssert {
-    @Test
+    @Test(groups = {"miniger1", "minireg2"})
     public void test01(){
         // 1. “http://zero.webappsecurity.com/” Adresine gidin
         Driver.getDriver().get("http://zero.webappsecurity.com/");

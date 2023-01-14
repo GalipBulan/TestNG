@@ -7,8 +7,9 @@ import pages.QualitydemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class C02_NegetifLoginTest{
+public class C02_NegetifLoginTest extends TestBaseRapor {
     // 3 test method'u olusturun
     // 1.de yanlis email, dogru sifre
     // 2.de dogru email yanlis sifre
@@ -18,12 +19,14 @@ public class C02_NegetifLoginTest{
     QualitydemyPage qualitydemyPage= new QualitydemyPage();
 
     @Test
-    public void yanlisEmailTesti(){
+    public void yanlisEmailTesti() throws InterruptedException {
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
+        qualitydemyPage.cookies.click();
+        Thread.sleep(3000);
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
@@ -33,12 +36,14 @@ public class C02_NegetifLoginTest{
     }
 
     @Test
-    public void yanlisPasswordTesti(){
+    public void yanlisPasswordTesti() throws InterruptedException {
         qualitydemyPage= new QualitydemyPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
+        qualitydemyPage.cookies.click();
+        Thread.sleep(3000);
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
@@ -50,13 +55,15 @@ public class C02_NegetifLoginTest{
 
 
     @Test
-    public void yanlisUsernameYanlisPasswordTesti(){
+    public void yanlisUsernameYanlisPasswordTesti() throws InterruptedException {
 
         qualitydemyPage= new QualitydemyPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
+        qualitydemyPage.cookies.click();
+        Thread.sleep(3000);
         qualitydemyPage.loginButonu.click();
 
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
